@@ -18,18 +18,19 @@ fn calculate_fibonachi() {
     io::stdin().read_line(&mut input).expect("Failed in read_line");
     let index : i32 = input.trim().parse().expect("Fail to parse. Your input is not in format of number");
 
-    let mut number1 = 1;
-    let mut number2 = 1;
-    let mut temp : i32;
-
     if index <= 2 {
         println!("Requested value : 1");
     } else {
+        let mut number1 = 1;
+        let mut number2 = 1;
+        let mut temp : i32;
+
         for _i in 2..index {
             temp = number1;
             number1 = number2;
             number2 = number1 + temp;
         };
+        
         println!("Requested value : {}", number2);
     }
 }
