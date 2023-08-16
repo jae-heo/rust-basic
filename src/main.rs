@@ -1,6 +1,18 @@
 use std::io;
 fn main() {
-    calculate_fibonachi()
+    test_ownership()
+}
+
+fn test_ownership() {
+    let mut test_var_a = String::from("test");
+
+    let test_var_b = test_var_a;
+
+    //This must show error and not compiled because it is borrowing value that is moved already.
+    // println!("{}", test_var_a);
+
+    println!("{}", test_var_b);
+
 }
 
 fn run_temperature_conversion() {
