@@ -3,6 +3,16 @@ fn main() {
     test_ownership()
 }
 
+fn test_borrowing() {
+    let mut my_string = String::from("test");
+    
+    let var2 = &mut my_string;
+
+    //If this line added, you will have an error that tells you cannot borrow more than once.
+    let var3 = &mut my_string;
+    println!("{}{}", var2, var3);
+}
+
 fn test_ownership() {
     let mut test_var_a = String::from("test");
 
