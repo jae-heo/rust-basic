@@ -1,6 +1,25 @@
 use std::io;
 fn main() {
-    test_ownership()
+    struct_example()
+}
+
+struct User {
+    active: bool,
+    username: String,
+    email: String,
+    sign_in_count: u64,
+}
+
+fn struct_example() {
+    let mut user1 = User {
+        active: true,
+        username: String::from("someusername123"),
+        email: String::from("someone@example.com"),
+        sign_in_count: 1,
+    };
+
+    //If you want to change the field of structure, you declare the variable mutable
+    user1.email = String::from("test@test.com");
 }
 
 fn test_borrowing() {
