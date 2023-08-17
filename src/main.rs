@@ -10,6 +10,20 @@ struct User {
     sign_in_count: u64,
 }
 
+fn test_struct_update_syntax() {
+    let mut user1 = User {
+        active: true,
+        username: String::from("someusername123"),
+        email: String::from("someone@example.com"),
+        sign_in_count: 1,
+    };
+
+    let mut user2 = User {
+        email: String::from("jay@test.com"),
+        ..user1
+    };
+}
+
 fn struct_example() {
     let mut user1 = User {
         active: true,
@@ -40,7 +54,6 @@ fn build_user2(email: String, username: String) -> User {
         sign_in_count: 1,
     }
 }
-
 
 fn test_borrowing() {
     let mut my_string = String::from("test");
