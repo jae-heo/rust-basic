@@ -22,6 +22,26 @@ fn struct_example() {
     user1.email = String::from("test@test.com");
 }
 
+fn build_user1(email: String, username: String) -> User {
+    User {
+        active: true,
+        username: username,
+        email: email,
+        sign_in_count: 1,
+    }
+}
+
+//You can use shordhand way to initiate a struct like this function
+fn build_user2(email: String, username: String) -> User {
+    User {
+        active: true,
+        username,
+        email,
+        sign_in_count: 1,
+    }
+}
+
+
 fn test_borrowing() {
     let mut my_string = String::from("test");
     
