@@ -13,7 +13,9 @@ fn struct_print_pretty() {
     
     // println!("my user = {:#?}", my_user);
 
-    dbg!(my_user);
+    dbg!(&my_user);
+
+    println!("{}", my_user.active);
 }
 #[derive(Debug)]
 struct User {
