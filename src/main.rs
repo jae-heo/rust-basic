@@ -1,6 +1,27 @@
 use std::io;
 fn main() {
-    struct_print_pretty();
+    struct_impl_test();
+}
+
+struct Rectangle {
+    width : i32,
+    height : i32,
+}
+
+impl Rectangle {
+    fn area(&self) -> i32 {
+        self.height * self.width
+    }
+}
+
+fn struct_impl_test() {
+    let mut first_rectangle = Rectangle {
+        width : 50,
+        height : 60,
+    };
+    
+    println!("{}", first_rectangle.area());
+    
 }
 
 fn struct_print_pretty() {
