@@ -3,6 +3,7 @@ fn main() {
     struct_impl_test();
 }
 
+#[derive(Debug)]
 struct Rectangle {
     width : i32,
     height : i32,
@@ -14,6 +15,12 @@ impl Rectangle {
     }
 }
 
+impl Rectangle {
+    fn square(length : i32) -> Rectangle {
+        return Rectangle { width: length, height: length }
+    }
+}
+
 fn struct_impl_test() {
     let mut first_rectangle = Rectangle {
         width : 50,
@@ -21,7 +28,9 @@ fn struct_impl_test() {
     };
     
     println!("{}", first_rectangle.area());
-    
+
+    println!("my square with length of 30 : {:#?}", Rectangle::square(30));
+
 }
 
 fn struct_print_pretty() {
