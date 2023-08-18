@@ -1,8 +1,19 @@
 use std::io;
 fn main() {
-    struct_example()
+    struct_print_pretty();
 }
 
+fn struct_print_pretty() {
+    let mut my_user = User {
+        active : true,
+        username: String::from("Jay"),
+        email : String::from("jay@jay.com"),
+        sign_in_count : 1,
+    };
+    
+    println!("my user = {:#?}", my_user);
+}
+#[derive(Debug)]
 struct User {
     active: bool,
     username: String,
