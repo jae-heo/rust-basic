@@ -11,7 +11,9 @@ fn struct_print_pretty() {
         sign_in_count : 1,
     };
     
-    println!("my user = {:#?}", my_user);
+    // println!("my user = {:#?}", my_user);
+
+    dbg!(my_user);
 }
 #[derive(Debug)]
 struct User {
