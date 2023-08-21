@@ -1,6 +1,29 @@
 use std::io;
 fn main() {
-    struct_impl_test();
+    test_enum();
+}
+
+fn test_enum() {
+    let four = IpAddrKind::V4;
+    let six = IpAddrKind::V6;
+
+    let home_ip_addr = IpAddr {
+        kind: IpAddrKind::V4,
+        address: String::from("192.168.0.1"),
+    };
+
+    println!("{}", home_ip_addr.address);
+}
+
+
+enum IpAddrKind {
+    V4,
+    V6,
+}
+
+struct IpAddr {
+    kind: IpAddrKind,
+    address: String,
 }
 
 #[derive(Debug)]
