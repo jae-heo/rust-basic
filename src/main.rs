@@ -4,17 +4,15 @@ fn main() {
 }
 
 fn test_enum() {
-    let four = IpAddrKind::V4(String::from("192.168.0.1"));
+    let four = IpAddrKind::V4(192, 168, 0, 1);
     let six = IpAddrKind::V6(String::from("::1"));
-
-
 
     println!("{:#?}", four);
 }
 
 #[derive(Debug)]
 enum IpAddrKind {
-    V4(String),
+    V4(u8, u8, u8 ,u8),
     V6(String),
 }
 
