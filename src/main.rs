@@ -17,8 +17,8 @@ fn test_enum() {
 
 
 enum IpAddrKind {
-    V4,
-    V6,
+    V4(String),
+    V6(String),
 }
 
 struct IpAddr {
