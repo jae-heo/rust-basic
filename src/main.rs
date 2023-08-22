@@ -1,6 +1,24 @@
 use std::io;
 fn main() {
-    test_enum();
+    test_match();
+}
+
+fn  test_match() {
+    let coin = Coin::Dime;
+
+    match coin {
+        Coin::Penny => println!("1"),
+        Coin::Nickel => println!("5"),
+        Coin::Dime => println!("10"),
+        Coin::Quarter => println!("25"),
+    };
+}
+
+enum Coin {
+    Penny,
+    Nickel,
+    Dime,
+    Quarter,
 }
 
 fn test_enum() {
