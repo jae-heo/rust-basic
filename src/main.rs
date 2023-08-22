@@ -6,12 +6,16 @@ fn main() {
 fn  test_match() {
     let coin = Coin::Dime;
 
-    match coin {
-        Coin::Penny => println!("1"),
-        Coin::Nickel => println!("5"),
-        Coin::Dime => println!("10"),
-        Coin::Quarter => println!("25"),
+    let value = match coin {
+        Coin::Penny => 1,
+        Coin::Nickel => 5,
+        Coin::Dime => {
+            10
+        },
+        Coin::Quarter => 25,
     };
+
+    println!("the value is {}", value);
 }
 
 enum Coin {
