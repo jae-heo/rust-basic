@@ -1,6 +1,19 @@
 use std::io;
 fn main() {
-    test_match();
+    test_match_with_option();
+}
+
+fn test_match_with_option() {
+    let test_value: Option<i32> = Some(10);
+
+    println!("{:?}", plus_one(test_value));
+}
+
+fn plus_one(value : Option<i32>) -> Option<i32>{
+    match value {
+        Some(i) => Some(i+1),
+        None => None
+    }
 }
 
 fn  test_match() {
