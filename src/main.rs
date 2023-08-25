@@ -1,6 +1,14 @@
 use std::io;
 fn main() {
-    test_match_with_option();
+    match_with_if_let();
+}
+
+fn match_with_if_let(){
+    let test_variable : Option<i32> = Some(3i32);
+
+    if let Some(number) = test_variable {
+        println!("this is a number from if-let example : {}", number);
+    }
 }
 
 fn test_match_with_option() {
