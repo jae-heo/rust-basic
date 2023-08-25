@@ -9,11 +9,19 @@ fn test_match_with_option() {
     println!("{:?}", plus_one(test_value));
 }
 
-// fn plus_one_not_compilable(value : Option<i32>) -> Option<i32>{
-//     match value {
-//         Some(i) => Some(i+1)
-//     }
-// }
+fn plus_one_compilable_with_underbar(value : Option<i32>) -> Option<i32>{
+    match value {
+        Some(i) => Some(i+1),
+        _ => None,
+    }
+}
+
+fn plus_one_compilable_with_other(value : Option<i32>) -> Option<i32>{
+    match value {
+        Some(i) => Some(i+1),
+        other => None,
+    }
+}
 
 fn plus_one(value : Option<i32>) -> Option<i32>{
     match value {
