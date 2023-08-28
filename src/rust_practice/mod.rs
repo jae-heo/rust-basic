@@ -1,4 +1,4 @@
-use crate::io;
+use std::io;
 
 pub fn match_with_if_let() {
     let test_variable: Option<i32> = Some(3i32);
