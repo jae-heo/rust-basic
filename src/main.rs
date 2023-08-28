@@ -1,4 +1,4 @@
-mod rust_practice;
+mod practice_rust;
 fn main() {
-    crate::rust_practice::match_with_if_let()
+    crate::practice_rust::match_with_if_let()
 }
