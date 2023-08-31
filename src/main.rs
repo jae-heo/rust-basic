@@ -1,7 +1,7 @@
-mod practice_vector;
+mod practice_panic;
 
 fn main() {
-    practice_vector::vector_borrowing_modifying()
+    practice_panic::test_panic();
 }
 
 
