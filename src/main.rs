@@ -1,11 +1,8 @@
 mod practice_panic;
 
 fn main() {
-    practice_panic::test_panic();
+    practice_panic::test_result().unwrap();
 }
-
-
-
 
 /*
 Modulization is in order of...
