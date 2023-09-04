@@ -1,7 +1,10 @@
 mod practice_panic;
 
 fn main() {
-    practice_panic::test_result().unwrap();
+    match practice_panic::test_result() {
+        Ok(_) => println!("Read file without problem!"),
+        Err(err) => println!("Read file without problem! Error : {:?}", err),
+    }
 }
 
 /*
