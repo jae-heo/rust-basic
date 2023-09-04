@@ -5,6 +5,14 @@ fn main() {
         Ok(_) => println!("Read file without problem!"),
         Err(err) => println!("Read file without problem! Error : {:?}", err),
     }
+
+    if  let Ok(_) = practice_panic::test_result() {
+        println!("Read file without problem!");
+    }
+
+    if  let Err(err) = practice_panic::test_result() {
+        println!("Read file without problem! Error : {:?}", err);
+    }
 }
 
 /*
