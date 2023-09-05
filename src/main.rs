@@ -1,12 +1,14 @@
 mod practice_panic;
 
 fn main() {
-    if  let Ok(_) = practice_panic::test_result() {
-        println!("Read file without problem!");
-    }
-
-    if  let Err(err) = practice_panic::test_result() {
-        println!("Read file without problem! Error : {:?}", err);
+    let mut count = 0;
+    loop {
+        count += 1;
+        if count > 10 {
+            break;
+        }
+        println!("count added! count : {}", count);
+        let _a = continue;
     }
 }
 
