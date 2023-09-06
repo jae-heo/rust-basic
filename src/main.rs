@@ -1,15 +1,10 @@
-mod practice_panic;
+mod practice_generic;
 
 fn main() {
-    let mut count = 0;
-    loop {
-        count += 1;
-        if count > 10 {
-            break;
-        }
-        println!("count added! count : {}", count);
-        let _a = continue;
-    }
+    let mut point = practice_generic::Point { x: 4, y: 6};
+
+
+    println!("x : {}", point.get_x());
 }
 
 /*
