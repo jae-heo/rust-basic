@@ -1,15 +1,7 @@
-use crate::practice_generic::{Point2, Point};
-
-mod practice_generic;
+mod practice_lifetime;
 
 fn main() {
-    let mut point1 = Point2 {x: 1, y: 2.0};
-    let mut point2 = Point2 {x: String::from("hello"), y: 'c'};
-
-    let mixed_point = Point2::mix_point(point1, point2);
-
-
-    println!("x : {} and y : {}", mixed_point.x, mixed_point.y);
+    practice_lifetime::test_lifetime();
 }
 
 /*
