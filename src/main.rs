@@ -1,7 +1,8 @@
-mod practice_lifetime;
+#[cfg(test)]
+mod practice_test;
 
 fn main() {
-    practice_lifetime::test_lifetime();
+    
 }
 
 /*
