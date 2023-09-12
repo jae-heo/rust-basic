@@ -5,6 +5,8 @@ fn it_works() {
 }
 
 #[test]
-    fn another() {
-        panic!("Make this test fail");
-    }
+#[should_panic]
+fn another() {
+    panic!("Make this test fail");
+}
+
