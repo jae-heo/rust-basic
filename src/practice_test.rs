@@ -10,3 +10,11 @@ fn another() {
     panic!("Make this test fail");
 }
 
+#[test]
+fn test_assert() {
+    assert!(always_true())
+}
+
+fn always_true() -> bool {
+    true
+}
