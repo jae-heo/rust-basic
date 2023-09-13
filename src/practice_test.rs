@@ -12,9 +12,21 @@ fn another() {
 
 #[test]
 fn test_assert() {
-    assert!(always_true())
+    assert!(always_true());
+    assert!(!always_false());
 }
 
 fn always_true() -> bool {
     true
+}
+
+fn always_false() -> bool {
+    false
+}
+
+#[test]
+fn test_with_error_message(){
+    let test_string = String::from("my name is jay");
+
+    assert!(test_string.contains("kim"), "the test_string does not contain the word 'kim'. \n the string was : {test_string}")
 }
