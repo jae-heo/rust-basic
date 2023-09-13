@@ -25,8 +25,22 @@ fn always_false() -> bool {
 }
 
 #[test]
-fn test_with_error_message(){
+fn test_with_error_message() {
     let test_string = String::from("my name is jay");
 
-    assert!(test_string.contains("kim"), "the test_string does not contain the word 'kim'. \n the string was : {test_string}")
+    assert!(
+        test_string.contains("kim"),
+        "the test_string does not contain the word 'kim'. \n the string was : {test_string}"
+    )
+}
+
+#[test]
+fn test_with_result() ->Result<(), String> {
+    let boolean = false;
+
+    if boolean {
+        Ok(())
+    } else {
+        Err(String::from("Your test failed haha"))
+    }
 }
