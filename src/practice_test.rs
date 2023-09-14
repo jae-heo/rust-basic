@@ -44,3 +44,15 @@ fn test_with_result() ->Result<(), String> {
         Err(String::from("Your test failed haha"))
     }
 }
+
+#[test]
+fn test_with_std_output() {
+    println!("this test is done well!");
+}
+
+
+#[test]
+#[ignore]
+fn test_ignored() {
+    println!("this test is done well!");
+}
